@@ -1,0 +1,53 @@
+---
+title: "assignment2_question6"
+output: html_document
+---
+
+```{r}
+
+#question 6 
+
+#part 1
+X <- c(1, 2, 3, 4, 5) #possible values of rv X 
+p <- c(0.1, 0.1, 0.3, 0.3, 0.2) #probability distribution 
+
+expected_mean = sum(X*p) #expected mean calculation
+
+expected_mean #display the value of the variable 
+variance = sum(((X - expected_mean)^2)*p) #variance calculation by definition, first 
+#formula in notes
+
+variance #display the value of the variable 
+
+#part 2
+#reference: https://bookdown.org/ndphillips/YaRrr/generating-random-data.html
+X <- sample(1:100, size = 1000, replace = TRUE) #creating a random sample size 1000 
+Y = X + 9 
+Z = 2 * X
+W = (-2 * X) + 9 
+
+Xmean = mean(X)
+Xmean
+
+Xvar = var(X)
+Xvar
+
+Ymean = mean(Y)
+Ymean 
+
+Yvar = var(Y)
+Yvar
+
+Zmean = mean(Z)
+Zmean
+
+Zvar = var(Z)
+Zvar
+
+Wmean = mean(W)
+Wmean
+
+Wvar = var(W)
+Wvar
+```
+

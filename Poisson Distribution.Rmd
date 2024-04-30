@@ -1,0 +1,31 @@
+---
+title: "assignment2_question7"
+output: html_document
+---
+
+```{r}
+#part 1
+n <- 1000 #sample size 
+lambda <- 8 #distribution paramter
+x <- rpois(n, lambda)
+z <- sort(unique(x))
+
+pmf.t <- dpois(z, lambda)
+
+hist(x, freq = FALSE, xlab="number of calls in a one hour period", main = "Relative Frequency Histogram")
+
+points(z, pmf.t, col="red") 
+
+#part 2
+a = dpois(3, lambda, log = FALSE) 
+a
+
+#part 3
+b = 1 - ppois(3, lambda, log = FALSE)
+b
+
+#part 4
+c = ppois(5, lambda, log = FALSE)
+c
+```
+
